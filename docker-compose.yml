@@ -15,6 +15,6 @@ services:
       - ~/.composer/cache:/root/.composer/cache
     environment:
       TZ: Europe/Moscow
-      XDEBUG_CONFIG: "remote_host=192.168.0.83 remote_port=9002 remote_enable=On"
-      PHP_IDE_CONFIG: "serverName=codeception"
+      XDEBUG_CONFIG: "remote_host=192.168.0.83 remote_port=9005 remote_enable=On"
+      PHP_IDE_CONFIG: "serverName=phpunit"
 
