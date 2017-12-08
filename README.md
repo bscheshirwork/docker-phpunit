@@ -1,6 +1,7 @@
 # Docker composition for run phpunit tests
 
 based on latest php docker image.
+>note: PHPUnit is only supposed to be used with the CLI SAPI.
 
 ### How to work
 

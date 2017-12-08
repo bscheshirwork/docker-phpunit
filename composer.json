@@ -1,0 +1,24 @@
+{
+    "name":"bscheshirwork/docker-phpunit",
+    "description":"phpunit composition",
+    "keywords":["BDD", "acceptance testing", "functional testing", "unit testing", "tdd"],
+    "type":"library",
+    "license":"MIT",
+    "authors":[
+        {
+            "name":"BSCheshir",
+            "email":"bscheshir.work@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=7.0 <8.0",
+        "phpunit/phpunit": ">4.8.20 <7.0",
+        "phpunit/php-code-coverage": ">=2.2.4 <6.0",
+        "phpunit/phpunit-mock-objects": ">2.3 <5.0"
+    },
+    "bin":["phpunit"],
+    "config": {
+        "platform": {}
+    }
+}

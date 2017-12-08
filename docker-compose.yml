@@ -1,0 +1,20 @@
+# Local run unit tests
+# for docker-compose CLI like this manual https://blog.jetbrains.com/phpstorm/2016/11/docker-remote-interpreters/
+# run directly:
+# docker-compose -f ../docker-phpunit/docker-compose.yml run --rm --entrypoint /repo/vendor/bin/phpunit php
+# and run `composer install` before first time use
+# docker-compose -f ../docker-phpunit/docker-compose.yml run --rm --entrypoint composer php update -vvv
+# after changes in Dockerfile or update parent image run
+# docker-compose -f ../docker-phpunit/docker-compose.yml build --pull --no-cache
+version: '3'
+services:
+  php:
+    build: . #build from Dockerfile
+    volumes:
+      - ../phpunit:/var/www/html #src and tests shared to container
+      - ~/.composer/cache:/root/.composer/cache
+    environment:
+      TZ: Europe/Moscow
+      XDEBUG_CONFIG: "remote_host=192.168.0.83 remote_port=9002 remote_enable=On"
+      PHP_IDE_CONFIG: "serverName=codeception"
+
